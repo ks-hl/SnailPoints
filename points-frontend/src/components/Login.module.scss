@@ -1,0 +1,64 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loginForm {
+    background: rgba(0, 0, 0, 0.342);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+
+    .formGroup {
+      margin-bottom: 1rem;
+      width: 100%;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        width: 92%;
+        padding: 0.5rem;
+        border: 1px solid #646464;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.658);
+        color: white;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      &:disabled {
+        background-color: #6a6a6a;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.error {
+  color: rgb(196, 84, 84);
+  width: 200px;
+}
+
+.success {
+  @extend .error;
+  color: rgb(84, 202, 84);
+}

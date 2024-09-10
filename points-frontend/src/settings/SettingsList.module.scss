@@ -1,0 +1,41 @@
+@import '../components/Header.module.scss';
+
+.setting {
+    @extend .button;
+
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;  // Aligns items vertically centered
+    gap: 20px;
+    cursor: default;
+
+    input.text, input.spinner {
+        width: 60px;  // Adjust the width to fit better
+        background-color: rgba(255, 255, 255, 0.2); // Slightly transparent background
+        border: 1px solid rgba(255, 255, 255, 0.5); // Light border to match the theme
+        border-radius: 5px;  // Rounded corners for a softer look
+        color: white;  // Text color
+        padding: 2px;  // Padding inside the input
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 1rem;  // Adjust font size
+    }
+
+    input.check {
+        width: 20px;
+        height: 20px;
+        accent-color: rgb(0, 150, 0);  // Customize the color of the checkbox
+        cursor: pointer;  // Pointer cursor to indicate interactivity
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1); // Slight hover effect to indicate interactivity
+    }
+}
+
+.error {
+    color: rgb(247, 120, 120);
+    font-weight: bold;  // Make errors stand out more
+}

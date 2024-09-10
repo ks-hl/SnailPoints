@@ -1,0 +1,85 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .headerContainer {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .title {
+        color: rgb(145, 207, 144);
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        cursor: pointer;
+
+        img {
+            height: 70px;
+        }
+    }
+
+    .settings {
+        .hamburger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 70px;
+            margin-right: 10px;
+            cursor: pointer;
+            filter: brightness(0) saturate(100%) invert(77%) sepia(23%) saturate(548%) hue-rotate(70deg) brightness(97%) contrast(83%);
+        }
+
+        .hamburgerDisabled {
+            @extend .hamburger;
+            cursor: default;
+            filter: brightness(0) saturate(100%) invert(22%) sepia(28%) saturate(376%) hue-rotate(90deg) brightness(102%) contrast(91%);
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    color: rgb(145, 207, 144);
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    border-radius: 8px;
+    background-color: rgba(133, 133, 133, 0.178);
+    width: 100%;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(201, 195, 195, 0.178);
+    }
+}
+
+.adminButton {
+    @extend .button;
+    background-color: rgb(71, 27, 27);
+    color: rgb(218, 218, 218);
+}
